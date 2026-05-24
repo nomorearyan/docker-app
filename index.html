@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dockerized App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">🐳</div>
+      <h1>Dockerized Web Application</h1>
+      <p class="subtitle">Running inside a Docker container</p>
+    </header>
+
+    <div class="status-badge">
+      <span class="dot"></span> Container is Live
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🖥️</div>
+        <div class="card-label">Hostname</div>
+        <div class="card-value">{{ info.hostname }}</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🐳</div>
+        <div class="card-label">Container</div>
+        <div class="card-value">{{ info.container }}</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔌</div>
+        <div class="card-label">Port</div>
+        <div class="card-value">{{ info.port }}</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🐍</div>
+        <div class="card-label">Python</div>
+        <div class="card-value">{{ info.python }}</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <div class="card-label">CPU Usage</div>
+        <div class="card-value">{{ info.cpu }}</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <div class="card-label">Memory Usage</div>
+        <div class="card-value">{{ info.memory }}</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">💻</div>
+        <div class="card-label">OS</div>
+        <div class="card-value">{{ info.os }}</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🕒</div>
+        <div class="card-label">Server Time</div>
+        <div class="card-value">{{ info.time }}</div>
+      </div>
+    </div>
+
+    <div class="endpoints">
+      <h2>Available Endpoints</h2>
+      <div class="endpoint"><span class="method">GET</span> <code>/</code> — Main dashboard</div>
+      <div class="endpoint"><span class="method">GET</span> <code>/health</code> — Health check (JSON)</div>
+    </div>
+
+    <footer>
+      Built with Flask · Containerized with Docker
+    </footer>
+  </div>
+</body>
+</html>
