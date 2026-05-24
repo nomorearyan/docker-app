@@ -1,5 +1,8 @@
 # 🐳 Basic Dockerized Application Deployment
 
+## Preview
+![App Preview](preview.png)
+
 A simple web application built with **Flask** and containerized using **Docker** with port mapping for local deployment.
 
 ---
